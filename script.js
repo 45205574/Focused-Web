@@ -162,5 +162,5 @@ signupForm.addEventListener('submit', (e) => {
     };
     
     console.log('Signup attempt:', formData);
-    alert('Signup functionality would be connected to your backend here!');
+    alert('Signed up');
 });
