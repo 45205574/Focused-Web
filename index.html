@@ -12,8 +12,8 @@
         <div class="title">CreativeZ</div>
         <div class="nav-right">
             <input type="text" placeholder="Search..." />
-            <button class="btn">Log in</button>
-            <button class="btn">Sign up</button>
+            <button class="btn nav-login">Log in</button>
+            <button class="btn nav-signup">Sign up</button>
         </div>
     </div>
 
@@ -58,5 +58,35 @@
         Mori
     </footer>
 
+    <!-- AUTH MODAL -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Log in</h2>
+            
+            <!-- LOGIN FORM -->
+            <form id="loginForm" class="auth-form">
+                <input type="email" id="loginEmail" placeholder="Email" required />
+                <input type="password" id="loginPassword" placeholder="Password" required />
+                <button type="submit" class="submit-btn">Log in</button>
+                <p class="toggle-text">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </form>
+
+            <!-- SIGNUP FORM -->
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <input type="text" id="signupName" placeholder="First Name" required />
+                <input type="text" id="signupSurname" placeholder="Last Name" required />
+                <input type="email" id="signupEmail" placeholder="Email Address" required />
+                <input type="password" id="signupPassword" placeholder="Password" required />
+                <div id="passwordHints" class="password-hints"></div>
+                <input type="password" id="signupConfirmPassword" placeholder="Verify Password" required />
+                <div id="passwordMatch" class="password-match"></div>
+                <button type="submit" class="submit-btn">Sign up</button>
+                <p class="toggle-text">Already have an account? <a href="#" id="showLogin">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
