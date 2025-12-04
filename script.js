@@ -10,7 +10,9 @@ const showLoginLink = document.getElementById('showLogin');
 const modalTitle = document.getElementById('modalTitle');
 
 // Function to open modal with login form
-function openLoginModal() {
+function openLoginModal(e) {
+    e.preventDefault();
+    e.stopPropagation();
     modal.style.display = 'block';
     loginForm.style.display = 'flex';
     signupForm.style.display = 'none';
@@ -18,18 +20,22 @@ function openLoginModal() {
 }
 
 // Function to open modal with signup form
-function openSignupModal() {
+function openSignupModal(e) {
+    e.preventDefault();
+    e.stopPropagation();
     modal.style.display = 'block';
     loginForm.style.display = 'none';
     signupForm.style.display = 'flex';
     modalTitle.textContent = 'Sign up';
 }
 
-// Open modal when nav "Log in" is clicked
+// Open modal when nav "Log in" is clicked - support both click and touch
 navLoginBtn.addEventListener('click', openLoginModal);
+navLoginBtn.addEventListener('touchend', openLoginModal);
 
-// Open modal when nav "Sign up" is clicked
+// Open modal when nav "Sign up" is clicked - support both click and touch
 navSignupBtn.addEventListener('click', openSignupModal);
+navSignupBtn.addEventListener('touchend', openSignupModal);
 
 // Close modal when X is clicked
 closeBtn.addEventListener('click', () => {

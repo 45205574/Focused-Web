@@ -43,10 +43,16 @@ body {
     color: #fff;
     cursor: pointer;
     font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .btn:hover {
     background: #005fcc;
+}
+
+.btn:active {
+    background: #004999;
 }
 
 /* Main Center Text */
